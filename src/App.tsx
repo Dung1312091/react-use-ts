@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import UseEvent from "./containers/useEvent";
+import { UseEvent, UseGeolocation, UseIntersection } from "./containers";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +14,12 @@ const App: React.FC = () => {
           <Switch>
             <Route path="/use-event">
               <UseEvent />
+            </Route>
+            <Route path="/use-getlocation">
+              <UseGeolocation />
+            </Route>
+            <Route path="/use-intersection">
+              <UseIntersection />
             </Route>
           </Switch>
         </div>
